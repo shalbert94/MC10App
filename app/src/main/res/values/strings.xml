@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MC10App</string>
+
+    <!--LoginFragment text-->
+    <string name="username_text">Username</string>
+    <string name="password_text">Password</string>
+    <string name="login_text">Login</string>
+
+    <!--Shared preferences keys-->
+    <string name="access_token">access_token</string>
+    <string name="access_token_expiration">access_token_expiration</string>
+    <string name="user_id">user_id</string>
+    <string name="user_account_id">user_account_id</string>
+    <string name="user_timezone">timezone</string>
+
+    <!--StudiesFragment Menu-->
+    <string name="logout_text">Logout</string>
+
+    <!--Bluetooth check-->
+    <string name="bluetooth_not_enabled_title">Bluetooth not Enabled.</string>
+    <string name="bluetooth_not_enabled_message">Please enable Bluetooth, and login again.</string>
+
+</resources>

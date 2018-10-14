@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.shalomhalbert.popup.mc10app"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //Support library
+    implementation "com.android.support:appcompat-v7:$VERSION_SUPPORT_APPCOMPAT"
+    implementation "com.android.support:support-v4:$VERSION_SUPPORT_APPCOMPAT"
+    implementation "com.android.support:recyclerview-v7:$VERSION_SUPPORT_APPCOMPAT"
+    implementation "com.android.support:design:$VERSION_SUPPORT_APPCOMPAT"
+
+    //Constraint layout
+    implementation "com.android.support.constraint:constraint-layout:$VERSION_CONSTRAINT_LAYOUT"
+
+    //Testing
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation "junit:junit:$VERSION_JUNIT"
+    testImplementation "com.google.truth:truth:$VERSION_TRUTH"
+    androidTestImplementation "com.android.support.test:runner:$VERSION_ANDROID_TEST"
+    androidTestImplementation "com.android.support.test:rules:$VERSION_ANDROID_TEST"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$VERSION_ESPRESSO"
+
+    //Retrofit
+    implementation "com.google.code.gson:gson:$VERSION_GSON"
+    implementation "com.squareup.retrofit2:retrofit:$VERSION_RETROFIT"
+    implementation "com.squareup.retrofit2:converter-gson:$VERSION_RETROFIT"
+    //OkHttp Logging Interceptor
+    implementation "com.squareup.okhttp3:logging-interceptor:$VERSION_OKHTTP3"
+
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$VERSION_LIFECYCLE"
+}
